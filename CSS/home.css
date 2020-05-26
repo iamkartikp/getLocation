@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(163, 163, 163);;
+}
+
+.feed {
+    background: white;
+    margin: 10vh 25vw;
+    padding: 10px;
+}
+
+.photo #inputImage {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.textarea textarea {
+    width: 100%;
+}
+
+#btn {
+    background: #3b5998;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+}
+
+.timeline {
+    text-align: center;
+    background: white;
+    margin: 10vh 25vw;
+    padding: 10px;
+}
+
+.timeline .heading {
+    font-size: 1.4rem;
+}
+
+.timeline img {
+    width: 100%;
+}
+
+.timeline-text {
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+}

@@ -1,0 +1,26 @@
+body {
+    background: rgb(163, 163, 163);
+}
+
+#myForm {
+    display: flex;
+    flex-direction: column;
+    margin: 10vh 35vw;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 25px;
+}
+
+#myForm input, #myForm button {
+    padding: 5px;
+    margin: 10px;
+    outline: none;
+}
+
+#myForm button {
+    background-color: rgb(69, 135, 223);
+    outline: none;
+    border: none;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}
