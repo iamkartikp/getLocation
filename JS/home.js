@@ -6,10 +6,9 @@ let caption = document.querySelector('#caption');
 let displayCaption = document.querySelector('#displayCaption');
 let displayDate = document.querySelector('#displayDate');
 
-let d = new Date();
-let now = d.toLocaleTimeString();
-
 btn.addEventListener('click', ()=> {
+    let d = new Date();
+    let now = d.toLocaleTimeString();
     displayCaption.textContent = caption.value;
     displayDate.textContent = `Posted at: ${now}`;
     if(navigator.geolocation) {
@@ -17,12 +16,22 @@ btn.addEventListener('click', ()=> {
     } else {
         displayLocation.innerHTML = 'Your Browser is not Supported!';
     }
+    
 })
 
-function myCurrentLocation(position) {
-    displayLocation.textContent = 'Longitude: ' + position.coords.longitude + ' Latitude: ' + position.coords.longitude;
+async function myCurrentLocation(position) {
+    const base = `https://geocode.xyz/${position.coords.latitude},${position.coords.longitude}?geoit=json`;
+
+    const response = await fetch(base);
+    const data = await response.json();
+
+    console.log(data);
+    displayLocation.textContent = `${data.city}, ${data.state}`;
 }
 
 inputImage.addEventListener('change', () => {
-    image.src = URL.createObjectURL(event.target.files[0]);
+    // image.src = URL.createObjectURL(event.target.files[0]);
+    // image.setAttribute('src',URL.createObjectURL(event.target.files[0]));
+    let fr = new FileReader();
+    
 })
