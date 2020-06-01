@@ -31,7 +31,5 @@ async function myCurrentLocation(position) {
 
 inputImage.addEventListener('change', () => {
     // image.src = URL.createObjectURL(event.target.files[0]);
-    // image.setAttribute('src',URL.createObjectURL(event.target.files[0]));
-    let fr = new FileReader();
-    
+    image.setAttribute('src',URL.createObjectURL(event.target.files[0]));  
 })
